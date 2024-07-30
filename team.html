@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <title>Team</title>
+
+  <style>
+    section {
+      background-color: white;
+      background-image: url("./images/team-BG.png");
+      background-position: right bottom;
+      background-size: 70%;
+    }
+
+    #List {
+      margin-top: 3rem;
+      padding-inline-start: 0;
+      list-style-position: inside;
+      list-style-image: url('./images/icon-list.png');
+    }
+
+    #List li {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 2px solid #f2ebf3;
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    }
+
+    /* Medium devices (tablets, 820px and down) */
+    @media (max-width: 820px) {
+
+      section {
+        height: 80vh;
+        background-size: 100%;
+      }
+
+      .hero {
+        align-items: stretch;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+
+    <nav>
+      <a href="./index.html">
+        <div id="website-logo">
+          <img src="./images/icon.png" alt="logo">
+          <h1>Flora</h1>
+        </div>
+      </a>
+
+      <ul id="sideMenu">
+        <a href="./index.html">
+          <li>Home</li>
+        </a>
+        <a href="./about.html">
+          <li>About</li>
+        </a>
+        <a href="./bouquet.html">
+          <li>Bouquet Suggestions</li>
+        </a>
+        <a href="./newArrivals.html">
+          <li>New Arrivals</li>
+        </a>
+        <a href="./contact.html">
+          <li>Contact</li>
+        </a>
+        <a href="./team.html">
+          <li id="active-page">Team</li>
+          <a href="./cart.html">
+            <li>Cart <i class="fas fa-shopping-cart"></i></li>
+          </a>
+        </a>
+      </ul>
+    </nav>
+
+    <div id="menu-icon">
+      <i class="fas fa-bars fa-lg"></i>
+    </div>
+  </header>
+
+  <section class="container">
+    <div class="hero">
+      <h1>Flora Team </h1>
+
+      <ul id="List">
+        <li>Raghad Abdulrahman Alanzi 431004346</li>
+                <li>Nesreen khalaf alshahrani 431003769
+                </li>
+                <li>Reyoof Hassan Almanjumi 
+                    431007992
+                    </li>
+                <li>Shoug Ayeed Alanzi
+                    431001879
+                    </li>
+                <li>Joud Nawaf Alanzi
+                    431001176
+                    </li>
+                <li>Eman Mohammed Albalawi 
+                    431008118</li>
+                <li>Sadeem masoud alharbi 431004309</li>
+
+      </ul>
+
+    </div>
+  </section>
+
+
+  <script src="./js/sideMenuMobile.js"></script>
+
+
+  <script>
+
+    // Get the list element
+    var teamList = document.getElementById('List');
+
+    // Get the list items
+    var listItems = Array.from(teamList.children);
+
+    // Shuffle list items 
+    listItems.sort(function () {
+      return Math.random() - 0.5
+    }
+    );
+
+    // Append the shuffled list items to the list
+    for (let item of listItems) {
+      teamList.appendChild(item);
+    }
+  </script>
+</body>
+
+</html>

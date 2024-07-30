@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <title>Cart</title>
+  <style>
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+
+    table th,
+    table td {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    table th {
+      background-color: #f2ebf3;
+      color: #614992;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="./index.html">
+        <div id="website-logo">
+          <img src="./images/icon.png" alt="logo">
+          <h1>Flora</h1>
+        </div>
+      </a>
+
+      <ul id="sideMenu">
+        <a href="./index.html">
+          <li>Home</li>
+        </a>
+        <a href="./about.html">
+          <li>About</li>
+        </a>
+        <a href="./bouquet.html">
+          <li>Bouquet Suggestions</li>
+        </a>
+        <a href="./newArrivals.html">
+          <li>New Arrivals</li>
+        </a>
+        <a href="./contact.html">
+          <li>Contact</li>
+        </a>
+        <a href="./team.html">
+          <li>Team</li>
+        </a>
+        <a href="./cart.html">
+          <li>Cart <i class="fas fa-shopping-cart"></i></li>
+        </a>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Your Cart</h1>
+    <div id="cartItems">
+      <!-- The cart items will be dynamically inserted here -->
+    </div>
+    <button id="clearCartBtn">Clear Cart</button>
+  </main>
+
+  <script src="./js/cart.js"></script>
+</body>
+
+</html>

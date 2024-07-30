@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <title>Bouquet Suggestions</title>
+
+  <style>
+    section {
+      background-color: white;
+      background-image: url("./images/Bouquet-BG.png");
+      background-position: 140% bottom;
+      background-size: 70%;
+    }
+
+    .banner {
+      background-color: #f2ebf3;
+      height: 50vh;
+      padding: 5rem 2rem;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      place-items: center;
+    }
+
+    .occasion {
+      width: 25rem;
+      height: 15rem;
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    .occasion img {
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    }
+
+    .occasion p {
+      color: #614992;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    video {
+      width: 80%;
+      margin: 3rem;
+      border-radius: 20px;
+
+    }
+
+    /* Medium devices (tablets, 820px and down) */
+    @media (max-width: 820px) {
+
+      section {
+        height: 63vh;
+      }
+
+      .banner {
+        height: max-content;
+        grid-template-columns: auto;
+        row-gap: 5rem;
+      }
+    }
+
+    /* Small devices (phones, 576px and down) */
+    @media (max-width: 576px) {
+      section {
+        height: 90vh;
+        background-size: 100%;
+      }
+
+      .occasion {
+        width: 22rem;
+      }
+
+      video {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="./index.html">
+        <div id="website-logo">
+          <img src="./images/icon.png" alt="logo">
+          <h1>Flora</h1>
+        </div>
+      </a>
+
+      <ul id="sideMenu">
+        <a href="./index.html">
+          <li>Home</li>
+        </a>
+        <a href="./about.html">
+          <li>About</li>
+        </a>
+        <a href="./bouquet.html">
+          <li id="active-page">Bouquet Suggestions</li>
+        </a>
+        <a href="./newArrivals.html">
+          <li>New Arrivals</li>
+        </a>
+        <a href="./contact.html">
+          <li>Contact</li>
+        </a>
+        <a href="./team.html">
+          <li>Team</li>
+          <a href="./cart.html">
+            <li>Cart <i class="fas fa-shopping-cart"></i></li>
+          </a>
+        </a>
+      </ul>
+    </nav>
+
+    <div id="menu-icon">
+      <i class="fas fa-bars fa-lg"></i>
+    </div>
+  </header>
+
+  <section class="container">
+    <div class="hero">
+      <h1>Discover the Perfect Bouquet for Every Occasion </h1>
+      <p>Welcome to Flora’s Bouquet Suggestions! We believe that every occasion is unique and deserves a special bouquet
+        to match. Whether you’re celebrating a joyous wedding, honoring a recent graduate, or wishing someone a happy
+        birthday, we’ve got you covered.</p>
+
+      <a href="./about.html">
+        <button>Discover More</button>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="banner">
+    <div class="occasion">
+      <img src="./images/occasion-1.png" alt="">
+      <p>Wedding Bouquets</p>
+    </div>
+
+    <div class="occasion">
+      <img src="./images/occasion-2.jpg" alt="">
+      <p>Graduation Bouquets</p>
+    </div>
+
+    <div class="occasion">
+      <img src="./images/occasion-3.png" alt="">
+      <p>Birthday Bouquets</p>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <h1 style="text-align: center;">Trust in the Artistry of Our Experts to Craft the Perfect Bouquet for You</h1>
+
+    <video controls>
+      <source src="./videos/flower-shop.mp4" type="video/mp4">
+    </video>
+
+  </main>
+
+  <script src="./js/sideMenuMobile.js"></script>
+</body>
+
+</html>

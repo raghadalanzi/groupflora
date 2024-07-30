@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <title>Flora Home</title>
+
+  <style>
+    section {
+      background-image: url("./images/girl-with-flowers.png");
+      background-position: 150% bottom;
+      background-size: 70%;
+    }
+
+    .hero h1 {
+      font-size: 70px;
+    }
+
+    @media (max-width: 820px) {
+      section {
+        background-position: center bottom;
+        background-size: 90%;
+        align-items: flex-start;
+      }
+
+      .hero h1 {
+        font-size: 60px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      section {
+        height: 90vh;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="./index.html">
+        <div id="website-logo">
+          <img src="./images/icon.png" alt="logo">
+          <h1>Flora</h1>
+        </div>
+      </a>
+
+      <ul id="sideMenu">
+        <a href="./index.html">
+          <li id="active-page">Home</li>
+        </a>
+        <a href="./about.html">
+          <li>About</li>
+        </a>
+        <a href="./bouquet.html">
+          <li>Bouquet Suggestions</li>
+        </a>
+        <a href="./newArrivals.html">
+          <li>New Arrivals</li>
+        </a>
+        <a href="./contact.html">
+          <li>Contact</li>
+        </a>
+        <a href="./team.html">
+          <li>Team</li>
+        </a>
+        <a href="./cart.html">
+          <li>Cart <i class="fas fa-shopping-cart"></i></li>
+        </a>
+      </ul>
+    </nav>
+
+    <div id="menu-icon">
+      <i class="fas fa-bars fa-lg"></i>
+    </div>
+  </header>
+
+  <section class="container">
+    <div class="hero">
+      <h1>Welcome to Flora! </h1>
+      <p>Immerse yourself in the enchanting world of flowers. From the vibrant hues of summer blooms to the delicate
+        beauty of winter blossoms, we bring nature’s artistry to your doorstep. Explore our diverse collection, find the
+        perfect bouquet for any occasion, or simply lose yourself in the captivating colors and fragrances of our latest
+        arrivals.</p>
+
+      <a href="./newArrivals.html">
+        <button>Start Shopping</button>
+      </a>
+    </div>
+  </section>
+
+  <script src="./js/sideMenuMobile.js"></script>
+  <script>
+    function addToCart(item) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push(item);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(item + ' added to cart!');
+    }
+  </script>
+</body>
+
+</html>
